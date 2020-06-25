@@ -1,0 +1,168 @@
+<!-- https://learn.digitalcrafts.com/immersive/lessons/handling-user-input/dom-101/#medium -->
+<!DOCTYPE html>
+<!-- <html>
+    <head>
+        <title>Small Exercise</title>
+    </head>
+    <body>
+        <h1 id="heading"></h1>
+        <ul id="list">
+            <li id="lettuce" class="green list-item">Lettuce</li>
+            <li id="tomato" class="red list-item">Tomato</li>
+            <li id="cheese" class="yellow list-item">Cheese</li>
+            <li id="burger">Burger</li>
+        </ul>
+        <script>
+            // Add a Heading
+            let header = document.getElementById("heading");
+            console.log(header);
+            header.innerText = "Toppings";
+
+            // Add Class
+            let burClass = document.getElementById("burger");
+            burClass.classList.add("list-item");
+
+            // Create and Append
+            let currentList = document.getElementById("list");
+            let newLi =document.createElement("li");
+            let newContent = document.createTextNode("Fries");
+            newLi.appendChild(newContent);
+            currentList.appendChild(newLi)
+            
+        </script>
+    </body>
+</html> -->
+<html>
+    <head>
+        <title>Large Exercise</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div id="root">
+            <script>
+                aboutPage();
+        
+                function aboutPage(){
+                    let root = document.getElementById("root");
+                    root.appendChild(aboutHeader());
+                    root.appendChild(aboutContent());
+                }
+                function aboutHeader(){
+                    let header = document.createElement("header");
+                    header.appendChild(aboutTitle());
+                    header.appendChild(aboutNav());
+                    return header;
+                }
+                function aboutTitle(){
+                    let headTitle = document.createElement("h1");
+                    headTitle.textContent = "Eric Yim";
+                    return headTitle;
+                }
+                function aboutNav(){
+                let unorderedList = document.createElement("ul");
+        
+                ["Home", "About", "Gallery", "More"].forEach(item => {
+                    let liNav = document.createElement("li");
+                    let link = document.createElement("a");
+                    link.setAttribute("href","#");
+                    link.textContent = item;
+                    liNav.appendChild(link);
+                    unorderedList.appendChild(liNav);
+                });
+                return unorderedList;
+                }
+                // navigation links "aboutNav"
+                let homeLink = document.getElementsByTagName('a')[0];
+                let home = homeLink.setAttribute("href","https://www.digitalcrafts.com/");
+        
+                let aboutLink = document.getElementsByTagName('a')[1]
+                let about = aboutLink.setAttribute("href","#About")
+                
+                let galLink = document.getElementsByTagName('a')[2]
+                let gallery = galLink.setAttribute("href","#Gallery")
+        
+                let moreLink = document.getElementsByTagName('a')[3]
+                let more = moreLink.setAttribute("href","#More")
+                // ___________________________
+                function aboutContent(){
+                    let content = document.createElement("main");
+                    content.appendChild(aboutCta());
+                    let aboutSection = contentSection("About Me");
+                    let gallerySection = contentSection("Gallery");
+                    let moreSection = contentSection("More");
+                    content.appendChild(aboutSection);
+                    content.appendChild(gallerySection);
+                    content.appendChild(moreSection);
+                    return content;
+                }
+                function aboutCta(){
+                    cta = document.createElement("div");
+                    cta.setAttribute("class","cta");
+                    let heading = document.createElement("h2");
+                    heading.textContent = "";
+                    cta.appendChild(heading);
+                    let desc = document.createElement("a");
+                    desc.setAttribute("id","avatar");
+                    cta.appendChild(desc);
+                    return cta;
+                }
+                function contentSection(headline) {
+                    var post = document.createElement("article");
+                    var headline = buildPostHeadline(headline);
+                    post.appendChild(headline);
+                    var desc = document.createElement("p");
+                    desc.textContent = "I've been working on this for too long... I'm calling it a night. This is too exhausting..";
+                    desc.setAttribute("id","info")
+                    post.appendChild(desc);
+                    
+                    return post;
+                }
+                function buildPostHeadline(headline) {
+                    let element = document.createElement("h3");
+                    let link = document.createElement("p");
+                    link.setAttribute("id", "sepSection");
+                    link.setAttribute("class", "post-headline");
+                    link.textContent = headline;
+                    element.appendChild(link);
+                    return element;
+                }
+                // Header pic______________________________
+                var ctaImg = document.createElement("img");
+                ctaImg.src = "avatar.png";
+                var src = document.getElementById("avatar");
+                src.appendChild(ctaImg);
+                // ________________________________________
+
+                //About section
+                let artOne = document.getElementsByTagName("article")[0];
+                let aboutOne = artOne.setAttribute("id","About");
+                let aboutoNe = artOne.setAttribute("class", "aboutCss");
+
+                function aboutMe(){
+                    let article = document.getElementsByClassName("aboutCss");
+                    let linkArticle = document.createElement("p");
+                    linkArticle.setAttribute("id","aboutId");
+                    linkArticle.textContent = "Something";
+                    article.appendChild(linkArticle);
+                    return article;
+
+                }
+
+
+
+                // Gallery section
+                let artTwo = document.getElementsByTagName("article")[1];
+                let aboutTwo = artTwo.setAttribute("id","Gallery");
+                let abouttWo = artTwo.setAttribute("class","galleryCss");
+
+
+                // More section
+                let artRee = document.getElementsByTagName("article")[2];
+                let aboutRee = artRee.setAttribute("id","More");
+                let aboutHree = artRee.setAttribute("class","moreCss");
+                
+
+            </script>
+        </div>
+    </body>
+</html>
