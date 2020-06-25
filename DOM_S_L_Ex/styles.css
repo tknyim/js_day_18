@@ -1,70 +1,96 @@
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 
-  body {
-    margin: 0;
-    font-family: sans-serif;
-    line-height: 1.2;
-    background-image: url("ak_scene.jpg");
-    background-size: 1915px;
-  }
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.2;
+  background-image: url("ak_scene.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  h1 {
-    margin: 0;
-  }
+h1 {
+  margin: 0;
+}
 
-  header {
-    display: flex;
-    /* justify-content: space-between; */
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    background-color: #52a6fa4f;
-    padding: 10px;
-  }
+header {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-color: #52a6fa4f;
+  padding: 10px;
+}
 
-  header a {
-    color: white;
-    text-decoration: none;
-  }
+header a {
+  color: white;
+  text-decoration: none;
+}
 
-  header > ul {
-    margin: 0;
-    list-style-type: none;
-  }
+header > ul {
+  margin: 0;
+  list-style-type: none;
+}
 
-  header > ul > li {
-    float: left;
-    margin-right: 10px;
-  }
+header > ul > li {
+  float: left;
+  margin-right: 10px;
+}
 /* header:hover {
-    background-color:#52a6fa4f;
-    position: relative; */
+  background-color:#52a6fa4f;
+  position: relative;
+} */
+main {
+  padding: 10px;
 }
-  main {
-    padding: 10px;
-  }
 div {
-    margin: auto;
+  /* display: flex; */
+  margin: auto px;
+  /* padding: 1000 px; */
+} 
+article {
+margin-bottom: 60px;
+background-color:#52a6fa4f;
+padding: 100px 200px;
 }
-  article {
-    margin-bottom: 60px;
-    background-color:#52a6fa4f;
+p {
+text-decoration: none;
+color: white;
 }
 
-  .cta {
-    background-color: #52a6fa4f;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    padding: 10px;
-    border: 5px
-  }
+.aboutCss {
+  text-align: center;
+}
 
+.cta {
+  background-color: #52a6fa4f;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 10px;
+  border: 5px
+}
 
+img {
+  border-radius: 100px;
+  border-color: rgb(18, 18, 61);
+}  
 
-  .post-headline {
-    text-decoration: none;
-    color: white;
-  }
+li {
+  text-decoration: #52a6fa4f;
+  color: white;
+  text-shadow: #52a6fa4f;
+}
+
+h4 {
+  text-decoration: none;
+  color: white;
+}
+
+.post-headline {
+  text-decoration: none;
+  color: white;
+}

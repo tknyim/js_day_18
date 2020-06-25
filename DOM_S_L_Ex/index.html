@@ -60,7 +60,6 @@
                 }
                 function aboutNav(){
                 let unorderedList = document.createElement("ul");
-        
                 ["Home", "About", "Gallery", "More"].forEach(item => {
                     let liNav = document.createElement("li");
                     let link = document.createElement("a");
@@ -79,7 +78,7 @@
                 let about = aboutLink.setAttribute("href","#About")
                 
                 let galLink = document.getElementsByTagName('a')[2]
-                let gallery = galLink.setAttribute("href","#Gallery")
+                let gallery = galLink.setAttribute("href","https://www.google.com/search?q=alaska&sxsrf=ALeKk03kIECMeEPL1j7HUiz4vfIGTJWoGQ:1593104276915&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjXv4_0t53qAhWjVN8KHcuhD4AQ_AUoA3oECCcQBQ&biw=720&bih=798")
         
                 let moreLink = document.getElementsByTagName('a')[3]
                 let more = moreLink.setAttribute("href","#More")
@@ -88,10 +87,10 @@
                     let content = document.createElement("main");
                     content.appendChild(aboutCta());
                     let aboutSection = contentSection("About Me");
-                    let gallerySection = contentSection("Gallery");
+                    // let gallerySection = contentSection("Gallery");
                     let moreSection = contentSection("More");
                     content.appendChild(aboutSection);
-                    content.appendChild(gallerySection);
+                    // content.appendChild(gallerySection);
                     content.appendChild(moreSection);
                     return content;
                 }
@@ -110,10 +109,10 @@
                     var post = document.createElement("article");
                     var headline = buildPostHeadline(headline);
                     post.appendChild(headline);
-                    var desc = document.createElement("p");
-                    desc.textContent = "I've been working on this for too long... I'm calling it a night. This is too exhausting..";
-                    desc.setAttribute("id","info")
-                    post.appendChild(desc);
+                    // var desc = document.createElement("p");
+                    // desc.textContent = "I've been working on this for too long... I'm calling it a night. This is too exhausting..";
+                    // desc.setAttribute("id","info")
+                    // post.appendChild(desc);
                     
                     return post;
                 }
@@ -135,33 +134,73 @@
 
                 //About section
                 let artOne = document.getElementsByTagName("article")[0];
-                let aboutOne = artOne.setAttribute("id","About");
-                let aboutoNe = artOne.setAttribute("class", "aboutCss");
+                artOne.setAttribute("id","About");
+                artOne.setAttribute("class", "aboutCss");
 
-                function aboutMe(){
-                    let article = document.getElementsByClassName("aboutCss");
-                    let linkArticle = document.createElement("p");
-                    linkArticle.setAttribute("id","aboutId");
-                    linkArticle.textContent = "Something";
-                    article.appendChild(linkArticle);
-                    return article;
 
-                }
-
+                let linkAbout = document.createElement("p");
+                linkAbout.setAttribute("id","aboutId");
+                linkAbout.innerText = "My name is Eric Yim. I was born in Fairbanks, Alaska.";
+                artOne.append(linkAbout);
+                
 
 
                 // Gallery section
-                let artTwo = document.getElementsByTagName("article")[1];
-                let aboutTwo = artTwo.setAttribute("id","Gallery");
-                let abouttWo = artTwo.setAttribute("class","galleryCss");
+                // let artTwo = document.getElementsByTagName("article")[1];
+                // artTwo.setAttribute("id","Gallery");
+                // artTwo.setAttribute("class","galleryCss");
 
+                // let linkGallery = document.createElement("p");
+                // linkGallery.setAttribute("id","galleryId");
+                // linkGallery.innerText = "add pics here";
+                // artTwo.append(linkGallery);
+
+                // var galImg = document.createElement("img");
+                // galImg.galSrc = "ak_scene.jpg";
+                // var galSrc = document.getElementById("Gallery");
+                // galSrc.appendChild(galImg);
 
                 // More section
-                let artRee = document.getElementsByTagName("article")[2];
-                let aboutRee = artRee.setAttribute("id","More");
-                let aboutHree = artRee.setAttribute("class","moreCss");
+                let artRee = document.getElementsByTagName("article")[1];
+                artRee.setAttribute("id","More");
+                artRee.setAttribute("class","moreCss");
                 
+                let linkMore = document.createElement("p");
+                linkMore.setAttribute("id","moreId");
+                // linkMore.innerText = "like and dislike";
+                artRee.append(linkMore);
 
+                // Like for More Section                
+                let headMore = document.createElement("h4");
+                headMore.innerText = "My Likes:"
+                artRee.append(headMore)
+
+                let unlist = document.createElement("ul");
+                ["Working out/Exercise","My dogs", "Going out with friends"].forEach(likes => {
+                    let liMore = document.createElement("li");
+                    let aMore = document.createElement("a");
+                    aMore.setAttribute("id","likes");
+                    aMore.textContent = likes;
+                    liMore.appendChild(aMore);
+                    unlist.appendChild(liMore);
+                    artRee.appendChild(unlist)
+                });
+                
+                // Dislike for More Section
+                let heaDmore = document.createElement("h4");
+                heaDmore.innerText = "My Disikes:"
+                artRee.append(heaDmore)
+                
+                let dnList = document.createElement("ul");
+                ["Being stuck in traffic", "Humid weather", "Insects"].forEach(likes => {
+                    let diMore = document.createElement("li");
+                    let bMore = document.createElement("a");
+                    bMore.setAttribute("id","dislikes");
+                    bMore.textContent = likes;
+                    diMore.appendChild(bMore);
+                    dnList.appendChild(diMore);
+                    artRee.appendChild(dnList)
+                });
             </script>
         </div>
     </body>
